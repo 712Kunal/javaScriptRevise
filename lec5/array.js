@@ -110,3 +110,22 @@ for (let i = 0; i < rand.length; i++) {
 }
 console.log(evenarr); // [ 10, 20 ]
 console.log(oddarr); // [ 15, 5, 9 ]
+
+let randString = ["js", true, 10, "html", false, 20];
+let stringarr = [];
+let boolarr = [];
+let numarr = [];
+
+for (let i = 0; i < randString.length; i++) {
+  if (typeof randString[i] === "string") {
+    stringarr.push(randString[i]);
+  } else if (typeof randString[i] === "boolean") {
+    boolarr.push(randString[i]);
+  } else if (typeof randString[i] === "number") {
+    numarr.push(randString[i]);
+  }
+}
+
+console.log(stringarr); // [ 'js', 'html' ]
+console.log(boolarr); // [ true, false ]
+console.log(numarr); // [ 10, 20 ]
