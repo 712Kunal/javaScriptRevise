@@ -98,3 +98,15 @@ for (let i = 0; i < rand.length; i++) {
 }
 
 console.log(sum); // 30
+
+let evenarr = [];
+let oddarr = [];
+for (let i = 0; i < rand.length; i++) {
+  if (rand[i] % 2 === 0) {
+    evenarr.push(rand[i]);
+  } else {
+    oddarr.push(rand[i]);
+  }
+}
+console.log(evenarr); // [ 10, 20 ]
+console.log(oddarr); // [ 15, 5, 9 ]
