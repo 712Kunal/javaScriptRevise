@@ -152,3 +152,17 @@ for (let i = 0; i < products.length; i++) {
 }
 
 console.log(productans); // [ 'Tv', 'Ac', 'Fridge', 'Mobile', 'Laptop', 'Ps5' ]
+
+let anotherway = [];
+for (let i = 0; i < products.length; i++) {
+  anotherway.push(products[i][0] + products[i].slice(1).toLowerCase());
+}
+console.log(anotherway); // [ 'Tv', 'Ac', 'Fridge', 'Mobile', 'Laptop', 'Ps5' ]
+
+let greaterthan3 = [];
+for (let i = 0; i < products.length; i++) {
+  if (products[i].length > 3) {
+    greaterthan3.push(products[i]);
+  }
+}
+console.log(greaterthan3); // [ 'FRIDGE', 'MOBILE', 'LAPTOP' ]
