@@ -136,3 +136,19 @@ for (let i = 0; i < products.length; i++) {
   productarr.push(products[i].toLowerCase());
 }
 console.log(productarr); // [ 'tv', 'ac', 'fridge', 'mobile', 'laptop', 'ps5' ]
+
+let productans = [];
+for (let i = 0; i < products.length; i++) {
+  let curr = products[i];
+  let a = "";
+  for (let j = 0; j < curr.length; j++) {
+    if (j === 0) {
+      a += curr[j];
+    } else {
+      a += curr[j].toLowerCase();
+    }
+  }
+  productans.push(a);
+}
+
+console.log(productans); // [ 'Tv', 'Ac', 'Fridge', 'Mobile', 'Laptop', 'Ps5' ]
