@@ -192,3 +192,12 @@ for (let i = 0; i < products.length; i++) {
   }
 }
 console.log(evenLength); // [ 'TV', 'AC', 'FRIDGE', 'MOBILE', 'LAPTOP' ]
+
+let utils = ["charger", "Clothes", "bottle", "Bottle"];
+let startsWithc = [];
+for (let i = 0; i < utils.length; i++) {
+  if (utils[i].charAt(0) === "C" || utils[i].charAt(0) === "c") {
+    startsWithc.push(utils[i]);
+  }
+}
+console.log(startsWithc); // [ 'charger', 'Clothes' ]
