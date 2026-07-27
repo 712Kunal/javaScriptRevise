@@ -166,3 +166,29 @@ for (let i = 0; i < products.length; i++) {
   }
 }
 console.log(greaterthan3); // [ 'FRIDGE', 'MOBILE', 'LAPTOP' ]
+
+let evenIndicesProducts = [];
+for (let i = 0; i < products.length; i++) {
+  if (i % 2 === 0) {
+    evenIndicesProducts.push(products[i]);
+  }
+}
+console.log(evenIndicesProducts); // [ 'TV', 'FRIDGE', 'LAPTOP' ]
+
+let first3chars = [];
+for (let i = 0; i < products.length; i++) {
+  if (products[i].length < 3) {
+    continue;
+  } else {
+    first3chars.push(products[i].slice(0, 3));
+  }
+}
+console.log(first3chars); // [ 'FRI', 'MOB', 'LAP', 'PS5' ]
+
+let evenLength = [];
+for (let i = 0; i < products.length; i++) {
+  if (products[i].length % 2 === 0) {
+    evenLength.push(products[i]);
+  }
+}
+console.log(evenLength); // [ 'TV', 'AC', 'FRIDGE', 'MOBILE', 'LAPTOP' ]
