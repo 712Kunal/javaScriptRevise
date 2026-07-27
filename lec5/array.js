@@ -129,3 +129,10 @@ for (let i = 0; i < randString.length; i++) {
 console.log(stringarr); // [ 'js', 'html' ]
 console.log(boolarr); // [ true, false ]
 console.log(numarr); // [ 10, 20 ]
+
+let products = ["TV", "AC", "FRIDGE", "MOBILE", "LAPTOP", "PS5"];
+let productarr = [];
+for (let i = 0; i < products.length; i++) {
+  productarr.push(products[i].toLowerCase());
+}
+console.log(productarr); // [ 'tv', 'ac', 'fridge', 'mobile', 'laptop', 'ps5' ]
