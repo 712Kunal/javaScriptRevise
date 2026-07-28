@@ -243,17 +243,24 @@ let x = randarr.forEach((item) => {
 
 console.log(x); // undefined
 
-let multiples = [];
+let doubles = [];
 
 console.log("using foreach ->");
 
 randarr.forEach((item) => {
-  multiples.push(item + item);
+  doubles.push(item + item);
 });
 
-console.log(multiples); // [ 20, 40, 60, 80 ]
+console.log(doubles); // [ 20, 40, 60, 80 ]
 
 console.log("using map ->");
 
-let multiple = randarr.map((item) => item + item);
-console.log(multiple); // [ 20, 40, 60, 80 ]
+let double = randarr.map((item) => {
+  return item + item;
+});
+console.log(double); // [ 20, 40, 60, 80 ]
+
+let productMap = products.map((product) => {
+  return product[0] + product.slice(1).toLowerCase();
+});
+console.log(productMap); // [ 'Tv', 'Ac', 'Fridge', 'Mobile', 'Laptop', 'Ps5' ]
