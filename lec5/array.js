@@ -219,9 +219,9 @@ randarr.forEach((item, index) => {
   console.log(item, index);
 });
 
-randarr.forEach((item, index,a) => {
+randarr.forEach((item, index, arr) => {
   console.log(item, index);
-  console.log(a);
+  console.log(arr);
 });
 
 // 10 0
@@ -232,3 +232,28 @@ randarr.forEach((item, index,a) => {
 // [ 10, 20, 30, 40 ]
 // 40 3
 // [ 10, 20, 30, 40 ]
+
+randarr.forEach((item) => {
+  console.log(item);
+});
+
+let x = randarr.forEach((item) => {
+  return item;
+});
+
+console.log(x); // undefined
+
+let multiples = [];
+
+console.log("using foreach ->");
+
+randarr.forEach((item) => {
+  multiples.push(item + item);
+});
+
+console.log(multiples); // [ 20, 40, 60, 80 ]
+
+console.log("using map ->");
+
+let multiple = randarr.map((item) => item + item);
+console.log(multiple); // [ 20, 40, 60, 80 ]
