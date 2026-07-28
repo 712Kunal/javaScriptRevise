@@ -201,3 +201,14 @@ for (let i = 0; i < utils.length; i++) {
   }
 }
 console.log(startsWithc); // [ 'charger', 'Clothes' ]
+
+let randarr = [10, 20, 30, 40];
+
+const display = (num, index) => {
+  console.log(num, index);
+};
+
+for (let i = 0; i < randarr.length; i++) {
+  // console.log(randarr[i], i);
+  display(arr[i], i);
+}
