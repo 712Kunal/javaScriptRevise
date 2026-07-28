@@ -212,3 +212,9 @@ for (let i = 0; i < randarr.length; i++) {
   // console.log(randarr[i], i);
   display(arr[i], i);
 }
+
+randarr.forEach(display);
+
+randarr.forEach((item, index) => {
+  console.log(item, index);
+});
