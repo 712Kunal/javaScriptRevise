@@ -218,3 +218,17 @@ randarr.forEach(display);
 randarr.forEach((item, index) => {
   console.log(item, index);
 });
+
+randarr.forEach((item, index,a) => {
+  console.log(item, index);
+  console.log(a);
+});
+
+// 10 0
+// [ 10, 20, 30, 40 ]
+// 20 1
+// [ 10, 20, 30, 40 ]
+// 30 2
+// [ 10, 20, 30, 40 ]
+// 40 3
+// [ 10, 20, 30, 40 ]
