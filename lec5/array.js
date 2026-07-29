@@ -272,12 +272,12 @@ console.log(productMap2); // [ 'TV', 'AC', 'FRI', 'MOB', 'LAP', 'PS5' ]
 
 let arr1 = [100, 20, 30, 50, 200];
 
-let undo = arr1.map((item) => {
+let usingMap = arr1.map((item) => {
   if (item < 50) {
     return item;
   }
 });
-console.log(undo); // [ undefined, 20, 30, undefined, undefined ]
+console.log(usingMap); // [ undefined, 20, 30, undefined, undefined ]
 
 let filterArr = arr1.filter((item) => item < 50);
 console.log(filterArr); // [ 20, 30 ]
