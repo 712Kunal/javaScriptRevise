@@ -264,3 +264,8 @@ let productMap = products.map((product) => {
   return product[0] + product.slice(1).toLowerCase();
 });
 console.log(productMap); // [ 'Tv', 'Ac', 'Fridge', 'Mobile', 'Laptop', 'Ps5' ]
+
+let productMap2 = products.map((product) => {
+  return product.slice(0, 3);
+});
+console.log(productMap2); // [ 'TV', 'AC', 'FRI', 'MOB', 'LAP', 'PS5' ]
