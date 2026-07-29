@@ -293,3 +293,16 @@ for (let i = 0; i < arr1.length; i++) {
 
 let first = arr1.find((item) => item < 50);
 console.log(first); // 20
+
+let greaterThan3 = products.filter((product) => product.length > 3);
+console.log(greaterThan3); // [ 'FRIDGE', 'MOBILE', 'LAPTOP' ]
+
+let greaterThan3Find = products.find((product) => product.length > 3);
+console.log(greaterThan3Find); // FRIDGE
+
+let startingWithM = products.filter((product) => product.startsWith("M"));
+console.log(startingWithM); // [ 'MOBILE' ]
+
+let lessThan30MoreThan50 = arr1.filter((item) => item <= 30 && item >= 50);
+console.log(lessThan30MoreThan50); // []
+
