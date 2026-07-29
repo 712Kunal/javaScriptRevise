@@ -271,5 +271,13 @@ let productMap2 = products.map((product) => {
 console.log(productMap2); // [ 'TV', 'AC', 'FRI', 'MOB', 'LAP', 'PS5' ]
 
 let arr1 = [100, 20, 30, 50, 200];
-let reducedarr = arr1.filter((item) => item < 50);
-console.log(reducedarr); // [ 20, 30 ]
+
+let undo = arr1.map((item) => {
+  if (item < 50) {
+    return item;
+  }
+});
+console.log(undo); // [ undefined, 20, 30, undefined, undefined ]
+
+let filterArr = arr1.filter((item) => item < 50);
+console.log(filterArr); // [ 20, 30 ]
