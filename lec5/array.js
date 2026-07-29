@@ -269,3 +269,7 @@ let productMap2 = products.map((product) => {
   return product.slice(0, 3);
 });
 console.log(productMap2); // [ 'TV', 'AC', 'FRI', 'MOB', 'LAP', 'PS5' ]
+
+let arr1 = [100, 20, 30, 50, 200];
+let reducedarr = arr1.filter((item) => item < 50);
+console.log(reducedarr); // [ 20, 30 ]
