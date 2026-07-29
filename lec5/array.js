@@ -276,8 +276,20 @@ let usingMap = arr1.map((item) => {
   if (item < 50) {
     return item;
   }
+
+  // return item < 50; [ false, true, true, false, false ]
 });
 console.log(usingMap); // [ undefined, 20, 30, undefined, undefined ]
 
 let filterArr = arr1.filter((item) => item < 50);
 console.log(filterArr); // [ 20, 30 ]
+
+for (let i = 0; i < arr1.length; i++) {
+  if (arr1[i] < 50) {
+    console.log(arr1[i]); // 20
+    break;
+  }
+}
+
+let first = arr1.find((item) => item < 50);
+console.log(first); // 20
