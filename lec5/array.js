@@ -323,6 +323,54 @@ console.log(arrStr);
 // ]
 // reversing the array elements
 arrStr.reverse();
-// JOIN -> Adds all the elements of an array into a string, separated by the specified 
+// JOIN -> Adds all the elements of an array into a string, separated by the specified
 // separator string.
 console.log(arrStr.join("")); // TPIRCSAVAJ
+
+let str1 = "Hello Java Script";
+let arrStr1 = str1.split(" ");
+arrStr1.reverse();
+console.log(arrStr1.join(" ")); // Script Java Hello
+
+let result = str1
+  .split(" ")
+  .map((word) => word.split("").reverse().join(""))
+  .join(" ");
+
+console.log(result); // olleH avaJ tpircS
+
+let str2 = str1
+  .split(" ")
+  .map((item) => {
+    return item.split("").reverse().join("");
+  }) // [ 'olleH', 'avaJ', 'tpircS' ]
+  .join(" ") // 'olleH avaJ tpircS'
+  .split(" ") // [ 'olleH', 'avaJ', 'tpircS' ]
+  .reverse() // [ 'tpircS', 'avaJ', 'olleH' ]
+  .join(" ");
+console.log(str2); // tpircS avaJ olleH
+
+console.log(products.sort()); // [ 'AC', 'FRIDGE', 'LAPTOP', 'MOBILE', 'PS5', 'TV' ]
+
+let arr4 = [10, 20, 30, 40, 50, 1, 2, 9, 10];
+arr4.sort();
+console.log(arr4); // [
+//    1, 10, 10, 2, 20,
+//   30, 40, 50, 9
+// ]
+
+arr4.sort((a, b) => {
+  return a - b; // if positive then swap (negetive and 0 => no swap)
+});
+console.log(arr4); // [ 1, 2, 9, 10, 10, 20, 30, 40, 50 ] => ASCENDING ORDER
+
+arr4.sort((a, b) => {
+  return b - a; // if negative then swap
+});
+console.log(arr4); // [ 50, 40, 30, 20, 10, 10, 9, 2, 1 ] => DESCENDING ORDER
+
+products.sort((a, b) => {
+  return b.length - a.length;
+});
+
+console.log(products); // [ 'FRIDGE', 'LAPTOP', 'MOBILE', 'PS5', 'AC', 'TV' ]
