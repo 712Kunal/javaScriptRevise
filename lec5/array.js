@@ -306,3 +306,8 @@ console.log(startingWithM); // [ 'MOBILE' ]
 let lessThan30MoreThan50 = arr1.filter((item) => item <= 30 && item >= 50);
 console.log(lessThan30MoreThan50); // []
 
+let arr2 = [10, 20, 100, 200, 300];
+console.log(arr2.includes(20)); // true
+
+arr2.reverse();
+console.log(arr2); // [ 300, 200, 100, 20, 10 ]
