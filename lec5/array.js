@@ -311,3 +311,18 @@ console.log(arr2.includes(20)); // true
 
 arr2.reverse();
 console.log(arr2); // [ 300, 200, 100, 20, 10 ]
+// reverse method is not present in the string, its only present in an array
+
+let str = "JAVASCRIPT";
+let arrStr = str.split("");
+console.log(arrStr);
+// [
+//   'J', 'A', 'V', 'A',
+//   'S', 'C', 'R', 'I',
+//   'P', 'T'
+// ]
+// reversing the array elements
+arrStr.reverse();
+// JOIN -> Adds all the elements of an array into a string, separated by the specified 
+// separator string.
+console.log(arrStr.join("")); // TPIRCSAVAJ
