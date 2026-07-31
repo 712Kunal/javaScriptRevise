@@ -407,3 +407,12 @@ let isSomeLessThan50 = arr4.some((item) => {
   return item < 50;
 }); // Determines whether the specified callback function returns true for any element of an array.
 console.log(isSomeLessThan50); // true
+
+let nestedArr = [10, [20, 30, [40, [50, 60]]]];
+console.log(nestedArr[1][0]); // 20
+console.log(nestedArr[1]); // [ 20, 30 ]
+console.log(nestedArr.length); // 2
+
+console.log(nestedArr.flat(1)); // [ 10, 20, 30, [ 40, [ 50, 60 ] ] ]
+console.log(nestedArr.flat(2)); // [ 10, 20, 30, 40, [ 50, 60 ] ]
+console.log(nestedArr.flat(Infinity)); // [ 10, 20, 30, 40, 50, 60 ]
