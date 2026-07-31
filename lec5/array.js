@@ -402,3 +402,8 @@ let isGreaterThan50 = arr4.every((item) => {
   return item > 50;
 }); // Determines whether all the members of an array satisfy the specified test.
 console.log(isGreaterThan50); // false
+
+let isSomeLessThan50 = arr4.some((item) => {
+  return item < 50;
+}); // Determines whether the specified callback function returns true for any element of an array.
+console.log(isSomeLessThan50); // true
