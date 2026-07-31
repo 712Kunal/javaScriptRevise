@@ -388,3 +388,9 @@ let reduceSum1 = arr4.reduce((acc, curr) => {
   return acc;
 }, 100);
 console.log(reduceSum1); // 272 (Initial value of the acc = 100)
+
+let reduceProducts = products.reduce((acc, curr) => {
+  return acc + curr;
+});
+
+console.log(reduceProducts, typeof reduceProducts); // FRIDGELAPTOPMOBILEPS5ACTV string
