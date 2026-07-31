@@ -394,3 +394,11 @@ let reduceProducts = products.reduce((acc, curr) => {
 });
 
 console.log(reduceProducts, typeof reduceProducts); // FRIDGELAPTOPMOBILEPS5ACTV string
+
+let friends = ["kunal", "ayush", "nitin", "jatin"];
+console.log(friends.indexOf("ayush")); // 1
+
+let isGreaterThan50 = arr4.every((item) => {
+  return item > 50;
+}); // Determines whether all the members of an array satisfy the specified test.
+console.log(isGreaterThan50); // false
