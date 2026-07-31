@@ -376,7 +376,15 @@ products.sort((a, b) => {
 console.log(products); // [ 'FRIDGE', 'LAPTOP', 'MOBILE', 'PS5', 'AC', 'TV' ]
 
 let reduceSum = arr4.reduce((acc, curr) => {
-  return acc + curr;
-}, 0);
+  acc += curr;
+  return acc;
+}, 0); // 0 is initial value of the accumulator, its optional aswell
+// then accumulator will be considered as first element of the array
 
 console.log(reduceSum); // 172
+
+let reduceSum1 = arr4.reduce((acc, curr) => {
+  acc += curr;
+  return acc;
+}, 100);
+console.log(reduceSum1); // 272 (Initial value of the acc = 100)
