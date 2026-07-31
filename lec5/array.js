@@ -375,8 +375,8 @@ products.sort((a, b) => {
 
 console.log(products); // [ 'FRIDGE', 'LAPTOP', 'MOBILE', 'PS5', 'AC', 'TV' ]
 
-let reduceSum = arr4.reduce((acc = 0, curr) => {
+let reduceSum = arr4.reduce((acc, curr) => {
   return acc + curr;
-});
+}, 0);
 
 console.log(reduceSum); // 172
