@@ -416,3 +416,22 @@ console.log(nestedArr.length); // 2
 console.log(nestedArr.flat(1)); // [ 10, 20, 30, [ 40, [ 50, 60 ] ] ]
 console.log(nestedArr.flat(2)); // [ 10, 20, 30, 40, [ 50, 60 ] ]
 console.log(nestedArr.flat(Infinity)); // [ 10, 20, 30, 40, 50, 60 ]
+
+let deplicatedArr = [10, 20, 20, 40, 50, 60, 10, 80, 90, 90];
+// deplicatedArr.sort((a, b) => {
+//   return a - b;
+// });
+
+// let index = 1;
+// for (let i = 1; i < deplicatedArr.length; i++) {
+//   if (deplicatedArr[i] != deplicatedArr[i - 1]) {
+//     deplicatedArr[index] = deplicatedArr[i];
+//     index++;
+//   }
+// }
+// console.log(deplicatedArr);
+
+let uniqueArr = deplicatedArr.filter((ele, index, arr) => {
+  return arr.indexOf(ele) === index;
+});
+console.log(uniqueArr); // [ 10, 20, 40, 50, 60, 80, 90 ]
