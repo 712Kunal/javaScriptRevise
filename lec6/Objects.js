@@ -44,6 +44,7 @@ let car = {
     fuel: "gasoline",
     mileage: 1000000,
   },
+  electric: false,
 };
 
 console.log(car.name); // BMW
@@ -52,3 +53,30 @@ car.color.forEach((color) => console.log(color));
 // red
 // white
 // blue
+
+console.log(car.engine.type); // v8
+
+// My object
+const myObj = {
+  name: "John",
+  age: 30,
+  city: "New York",
+  hobbies: ["reading", "playing games", "coding"],
+  job: {
+    company: "Google",
+    position: "Software Engineer",
+    salary: 50000,
+    experience: 5,
+    education: ["BE", "MSc"],
+    skills: ["Java", "Python", "C++"],
+  },
+  friends: ["Alice", "Bob", "Charlie"],
+  family: {
+    parents: ["John", "Mary"],
+    children: ["David", "Emily", "Olivia"],
+    siblings: ["Sarah", "Rachel"],
+  },
+  martialsStatus: false,
+};
+
+console.log(myObj);
