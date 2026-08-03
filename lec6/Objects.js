@@ -80,3 +80,53 @@ const myObj = {
 };
 
 console.log(myObj);
+
+console.log(Object.keys(myObj)); // [ 'name', 'age', 'city', 'hobbies', 'job', 'friends', 'family', 'martialsStatus' ]
+console.log(Object.values(myObj));
+// [
+//   'John',
+//   30,
+//   'New York',
+//   [ 'reading', 'playing games', 'coding' ],
+//   {
+//     company: 'Google',
+//     position: 'Software Engineer',
+//     salary: 50000,
+//     experience: 5,
+//     education: [ 'BE', 'MSc' ],
+//     skills: [ 'Java', 'Python', 'C++' ]
+//   },
+//   [ 'Alice', 'Bob', 'Charlie' ],
+//   {
+//     parents: [ 'John', 'Mary' ],
+//     children: [ 'David', 'Emily', 'Olivia' ],
+//     siblings: [ 'Sarah', 'Rachel' ]
+//   },
+//   false
+// ]
+
+console.log(Object.entries(myObj));
+// [
+//   [ 'name', 'John' ],
+//   [ 'age', 30 ],
+//   [ 'city', 'New York' ],
+//   [ 'hobbies', [ 'reading', 'playing games', 'coding' ] ],
+//   [
+//     'job',
+//     {
+//       company: 'Google',
+//       position: 'Software Engineer',
+//       salary: 50000,
+//       experience: 5,
+//       education: [Array],
+//       skills: [Array]
+//     }
+//   ],
+//   [ 'friends', [ 'Alice', 'Bob', 'Charlie' ] ],
+//   [
+//     'family',
+//     { parents: [Array], children: [Array], siblings: [Array] }
+//   ],
+//   [ 'martialsStatus', false ]
+// ]
+
