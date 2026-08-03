@@ -129,4 +129,84 @@ console.log(Object.entries(myObj));
 //   ],
 //   [ 'martialsStatus', false ]
 // ]
+console.log(Object.entries(myObj).flat(1));
 
+Object.freeze(myObj);
+myObj.name = "Peter";
+console.log(myObj);
+// {
+//   name: 'John',
+//   age: 30,
+//   city: 'New York',
+//   hobbies: [ 'reading', 'playing games', 'coding' ],
+//   job: {
+//     company: 'Google',
+//     position: 'Software Engineer',
+//     salary: 50000,
+//     experience: 5,
+//     education: [ 'BE', 'MSc' ],
+//     skills: [ 'Java', 'Python', 'C++' ]
+//   },
+//   friends: [ 'Alice', 'Bob', 'Charlie' ],
+//   family: {
+//     parents: [ 'John', 'Mary' ],
+//     children: [ 'David', 'Emily', 'Olivia' ],
+//     siblings: [ 'Sarah', 'Rachel' ]
+//   },
+//   martialsStatus: false
+// }
+
+myObj.nickName = "Peter";
+console.log(myObj);
+// {
+//   name: 'John',
+//   age: 30,
+//   city: 'New York',
+//   hobbies: [ 'reading', 'playing games', 'coding' ],
+//   job: {
+//     company: 'Google',
+//     position: 'Software Engineer',
+//     salary: 50000,
+//     experience: 5,
+//     education: [ 'BE', 'MSc' ],
+//     skills: [ 'Java', 'Python', 'C++' ]
+//   },
+//   friends: [ 'Alice', 'Bob', 'Charlie' ],
+//   family: {
+//     parents: [ 'John', 'Mary' ],
+//     children: [ 'David', 'Emily', 'Olivia' ],
+//     siblings: [ 'Sarah', 'Rachel' ]
+//   },
+//   martialsStatus: false
+// }
+
+delete myObj.name;
+console.log(myObj);
+// {
+//   name: 'John',
+//   age: 30,
+//   city: 'New York',
+//   hobbies: [ 'reading', 'playing games', 'coding' ],
+//   job: {
+//     company: 'Google',
+//     position: 'Software Engineer',
+//     salary: 50000,
+//     experience: 5,
+//     education: [ 'BE', 'MSc' ],
+//     skills: [ 'Java', 'Python', 'C++' ]
+//   },
+//   friends: [ 'Alice', 'Bob', 'Charlie' ],
+//   family: {
+//     parents: [ 'John', 'Mary' ],
+//     children: [ 'David', 'Emily', 'Olivia' ],
+//     siblings: [ 'Sarah', 'Rachel' ]
+//   },
+//   martialsStatus: false
+// }
+
+// check weater object is frozen or not
+console.log(Object.isFrozen(myObj)); // true
+
+Object.seal(myObj); // only update will happen
+myObj.name = "Peter";
+console.log(Object.isSealed(myObj)); // true
