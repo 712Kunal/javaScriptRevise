@@ -362,3 +362,20 @@ console.log(moviesWithEnglishLanguage);
 
 let actionMovies = movies.filter((movie) => movie.genre.includes("Action"));
 console.log(actionMovies);
+
+let heroineGreaterThan1 = movies.filter(
+  (movie) => movie.cast.heroine.length > 1,
+);
+console.log(heroineGreaterThan1);
+
+let movie4plusRatingActionMarathi = movies.filter((movie) => {
+  return (
+    movie.rating >= 4 &&
+    movie.language.includes("Marathi") &&
+    movie.genre.includes("Action")
+  );
+});
+
+movie4plusRatingActionMarathi.forEach((movie) => {
+  console.log(movie.name);
+});
