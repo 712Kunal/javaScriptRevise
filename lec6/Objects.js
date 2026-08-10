@@ -351,3 +351,14 @@ movies.forEach((movie) => {
 
 let releasedMovies = movies.filter((movie) => movie.isReleased);
 console.log(releasedMovies);
+
+let moviesRatingLessThan4 = movies.filter((movie) => movie.rating < 4);
+console.log(moviesRatingLessThan4);
+
+let moviesWithEnglishLanguage = movies.filter((movie) =>
+  movie.language.includes("English"),
+);
+console.log(moviesWithEnglishLanguage);
+
+let actionMovies = movies.filter((movie) => movie.genre.includes("Action"));
+console.log(actionMovies);
