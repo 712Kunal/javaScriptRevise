@@ -30,6 +30,8 @@ delete laptop.color;
 console.log(laptop); // { brand: 'hp', price: 100000 }
 console.log(laptop.color); // undefined
 
+console.log(laptop["brand"]); // 'hp'
+
 let car = {
   name: "BMW",
   model: "M5",
@@ -210,3 +212,142 @@ console.log(Object.isFrozen(myObj)); // true
 Object.seal(myObj); // only update will happen
 myObj.name = "Peter";
 console.log(Object.isSealed(myObj)); // true
+
+let movies = [
+  {
+    name: "Toxic",
+    genre: ["Action", "Thriller"],
+    language: ["Hindi", "English", "Kannada"],
+    rating: 4.5,
+    cast: {
+      hero: "Yash",
+      heroine: ["Kiara", "Tara"],
+      villain: "Yash",
+    },
+    isReleased: false,
+  },
+
+  {
+    name: "Pushpa 2",
+    genre: ["Action", "Drama"],
+    language: ["Telugu", "Hindi"],
+    rating: 4.7,
+    cast: {
+      hero: "Allu Arjun",
+      heroine: ["Rashmika Mandanna"],
+      villain: "Fahadh Faasil",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "Chhaava",
+    genre: ["Historical", "Drama"],
+    language: ["Hindi", "Marathi"],
+    rating: 4.8,
+    cast: {
+      hero: "Vicky Kaushal",
+      heroine: ["Rashmika Mandanna"],
+      villain: "Akshaye Khanna",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "Sairat",
+    genre: ["Romance", "Drama"],
+    language: ["Marathi"],
+    rating: 4.9,
+    cast: {
+      hero: "Akash Thosar",
+      heroine: ["Rinku Rajguru"],
+      villain: "Tanaji Galgunde",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "RRR",
+    genre: ["Action", "Drama"],
+    language: ["Telugu", "Hindi", "English"],
+    rating: 4.8,
+    cast: {
+      hero: ["Ram Charan", "Jr NTR"],
+      heroine: ["Alia Bhatt", "Olivia Morris"],
+      villain: "Ray Stevenson",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "Zapatlela",
+    genre: ["Comedy", "Horror"],
+    language: ["Marathi"],
+    rating: 4.6,
+    cast: {
+      hero: "Dilip Prabhavalkar",
+      heroine: ["Mahesh Kothare"],
+      villain: "Tatya Vinchu",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "Dangal",
+    genre: ["Sports", "Drama"],
+    language: ["Hindi"],
+    rating: 4.7,
+    cast: {
+      hero: "Aamir Khan",
+      heroine: ["Fatima Sana Shaikh", "Sanya Malhotra"],
+      villain: "Girish Kulkarni",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "Kantara",
+    genre: ["Action", "Drama", "Thriller"],
+    language: ["Kannada", "Hindi"],
+    rating: 4.9,
+    cast: {
+      hero: "Rishab Shetty",
+      heroine: ["Sapthami Gowda"],
+      villain: "Kishore",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "Drishyam",
+    genre: ["Crime", "Thriller"],
+    language: ["Hindi"],
+    rating: 4.6,
+    cast: {
+      hero: "Ajay Devgn",
+      heroine: ["Shriya Saran"],
+      villain: "Tabu",
+    },
+    isReleased: true,
+  },
+
+  {
+    name: "Ved",
+    genre: ["Romance", "Drama"],
+    language: ["Marathi"],
+    rating: 4.5,
+    cast: {
+      hero: "Riteish Deshmukh",
+      heroine: ["Genelia D'Souza"],
+      villain: "Jiya Shankar",
+    },
+    isReleased: true,
+  },
+];
+
+movies.forEach((movie) => {
+  console.log(movie.name, " : ", movie.cast.hero);
+});
+
+let releasedMovies = movies.filter((movie) => movie.isReleased);
+console.log(releasedMovies);
