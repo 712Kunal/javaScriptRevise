@@ -391,3 +391,7 @@ let mobile2 = {
 
 Object.assign(mobile1, mobile2);
 console.log(mobile1); // { name: 'Samsung', price: 90000, color: [ 'red', 'yellow' ] }
+
+
+
+
