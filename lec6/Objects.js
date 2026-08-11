@@ -379,3 +379,15 @@ let movie4plusRatingActionMarathi = movies.filter((movie) => {
 movie4plusRatingActionMarathi.forEach((movie) => {
   console.log(movie.name);
 });
+
+let mobile1 = {
+  name: "Samsung",
+  price: 90000,
+};
+
+let mobile2 = {
+  color: ["red", "yellow"],
+};
+
+Object.assign(mobile1, mobile2);
+console.log(mobile1); // { name: 'Samsung', price: 90000, color: [ 'red', 'yellow' ] }
