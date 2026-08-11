@@ -386,12 +386,80 @@ let mobile1 = {
 };
 
 let mobile2 = {
+  name: "Apple",
   color: ["red", "yellow"],
 };
 
+// copying mobile2 in mobile1
 Object.assign(mobile1, mobile2);
-console.log(mobile1); // { name: 'Samsung', price: 90000, color: [ 'red', 'yellow' ] }
+console.log(mobile1); // { name: 'Apple', price: 90000, color: [ 'red', 'yellow' ] }
 
+// copying mobile1 and mobile2 in mobile3
+let mobile3 = Object.assign({}, mobile1, mobile2);
+console.log(mobile3); // { name: 'Apple', price: 90000, color: [ 'red', 'yellow' ] }
 
+mobile1.price = 100000;
+console.log(mobile3);
 
+// shallow copy
+// non primitive datatypes supports shallow copy, while primitive datatypes does not
+mobile2.color.push("blue");
+console.log(mobile3); // { name: 'Apple', price: 90000, color: [ 'red', 'yellow', 'blue' ] }
 
+// Using new keyword
+let obj1 = new Object();
+console.log(obj1); // {}
+
+obj1.name = "kawasaki";
+obj1.price = 100000;
+obj1.color = "red";
+
+console.log(obj1); // { name: 'kawasaki', price: 100000, color: 'red' }
+
+// function constructor
+function bike(name, price) {
+  console.log(this); // bike {}
+  this.bikeName = name;
+  this.bikePrice = price;
+  console.log(this); // bike { bikeName: 'splendor', bikePrice: 90000 }
+}
+
+new bike("splendor", 90000);
+
+// By using class
+class Car {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+}
+
+const car1 = new Car("BMW", 250000);
+console.log(car1); // Car { name: 'BMW', price: 250000 }
+
+let user = {
+  name: "John",
+  place: "New York",
+  mobile: 38292932,
+  printUser1: function () {
+    console.log("Function calling from the object"); // Function calling from the object
+    console.log(user.name); // John
+    console.log(user.place); // New York
+    console.log(this.mobile); // 38292932
+  },
+  printUser: () => {
+    console.log("Function calling from the object"); // Function calling from the object
+    console.log(user.name); // John
+    console.log(user.place); // New York
+    console.log(this.mobile); // undefined
+
+    let demo = () => {
+      console.log(this);
+    };
+
+    demo();
+  },
+};
+
+user.printUser();
+user.printUser1();
