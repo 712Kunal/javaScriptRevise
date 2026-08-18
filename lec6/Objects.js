@@ -515,3 +515,22 @@ let binding = printUser1.bind(user1, "BTECH", "Computer Science");
 binding();
 // { name: 'Peter', place: 'New York', mobile: 38292932 }
 // My name is Peter and I came from New York and degree BTECH in Computer Science
+
+// example
+let employee1 = {
+  name: "aayush",
+  salary: 100000,
+};
+
+let employee2 = {
+  name: "rihaansh",
+  salary: 200000,
+};
+
+function totalSalary(bonus = 0, pf = 0) {
+  let totSal = this.salary + bonus - (pf + (this.salary * 18) / 100);
+  console.log(totSal);
+}
+
+totalSalary.call(employee1, 10000, 2000); // 90000
+totalSalary.call(employee2, 10000, 2000); // 172000
