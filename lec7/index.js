@@ -89,3 +89,6 @@ console.log(normalCar);
 //   price: 10000000,
 //   color: [ 'red', 'white', 'blue', 'black' ]
 // }
+
+console.log(carJSON);
+// {"name":"BMW","price":10000000,"color":["red","white","blue","black"]}
