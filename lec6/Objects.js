@@ -463,3 +463,55 @@ let user = {
 
 user.printUser();
 user.printUser1();
+
+// call, apply, bind
+
+let user1 = {
+  name: "Peter",
+  place: "New York",
+  mobile: 38292932,
+  // printUser1: function () {
+  //   console.log(`My name is ${this.name} and I came from ${this.place}`);
+  // },
+};
+
+// user1.printUser1();
+
+let user2 = {
+  name: "MJ",
+  place: "New York",
+  mobile: 38292932,
+  // printUser1: function () {
+  //   console.log(`My name is ${this.name} and I came from ${this.place}`);
+  // },
+};
+
+// user2.printUser1();
+
+function printUser1(degree = "NA", stream = "NA") {
+  console.log(this);
+  console.log(
+    `My name is ${this.name} and I came from ${this.place} and degree ${degree} in ${stream}`,
+  );
+}
+
+printUser1.call(user1);
+// { name: 'Peter', place: 'New York', mobile: 38292932 }
+// My name is Peter and I came from New York and degree NA in NA
+
+printUser1.call(user2);
+// { name: 'MJ', place: 'New York', mobile: 38292932 }
+// My name is MJ and I came from New York and degree NA in NA
+
+printUser1.call(user1, "BE", "CS");
+// { name: 'Peter', place: 'New York', mobile: 38292932 }
+// My name is Peter and I came from New York and degree BE in CS
+
+printUser1.apply(user1, ["BTECH", "IT"]);
+// { name: 'Peter', place: 'New York', mobile: 38292932 }
+// My name is Peter and I came from New York and degree BTECH in IT
+
+let binding = printUser1.bind(user1, "BTECH", "Computer Science");
+binding();
+// { name: 'Peter', place: 'New York', mobile: 38292932 }
+// My name is Peter and I came from New York and degree BTECH in Computer Science
