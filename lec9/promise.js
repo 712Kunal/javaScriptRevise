@@ -36,3 +36,81 @@ p.then((res) => {
   .finally(() => {
     console.log(`Promise completed`);
   });
+
+// PROMISE CHAINING
+let p1 = new Promise((resolve, reject) => {
+  resolve("Interview mail received");
+  //   reject("Interview mail not received");
+});
+
+p1.then((res) => {
+  console.log(res); // Interview mail received
+  return "Interview is cleared";
+})
+  .then((res) => {
+    console.log(res); // Interview is cleared
+    return "Offer letter generated";
+  })
+  .then((res) => {
+    console.log(res); // Offer letter generated
+    return "joining letter generated";
+  })
+  .then((res) => {
+    console.log(res); // joining letter generated
+    return "finally joined in the company";
+  })
+  .then((res) => {
+    console.log(res); // finally joined in the company
+  })
+  .catch((err) => {
+    console.log(err); // Interview mail not received
+  });
+
+let x = fetch("https://dummyjson.com/users");
+console.log(x);
+x.then((res) => {
+  console.log(res);
+  return res.json();
+}).then((res) => {
+  console.log(res);
+  console.log(res.limit);
+  console.log(res.skip);
+  console.log(res.users);
+});
+
+let recipes = fetch("https://dummyjson.com/recipes");
+recipes
+  .then((res) => {
+    console.log(res);
+    return res.json();
+  })
+  .then((res) => {
+    console.log(res);
+    console.log(res.limit);
+    console.log(res.skip);
+    console.log(res.recipes);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => {
+    console.log("Promise completed");
+  });
+
+let products = fetch("https://dummyjson.com/products");
+products
+  .then((res) => {
+    return res.json();
+  })
+  .then((res) => {
+    console.log(res);
+    console.log(res.limit);
+    console.log(res.skip);
+    console.log(res.products);
+  })
+  .catch((err) => {
+    console.log(err);
+  })
+  .finally(() => {
+    console.log("Promise completed");
+  });
