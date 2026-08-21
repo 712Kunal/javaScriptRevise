@@ -124,6 +124,32 @@ products
     console.log(res.limit);
     console.log(res.skip);
     console.log("products", res.products);
+
+    res.products.forEach((product) => {
+      console.log(
+        `${product.title} is rupees 💸 ${Math.round(product.price * 95)}`,
+      );
+    });
+
+    let inStock = res.products.filter(
+      (product) => product.availabilityStatus === "In Stock",
+    );
+    console.log(inStock);
+
+    let ratinGreaterThan3 = res.products.filter(
+      (product) => product.rating > 3,
+    );
+
+    console.log(ratinGreaterThan3);
+
+    res.products.forEach((product) => {
+      console.log(product.category);
+    });
+
+    let groceries = res.products.filter(
+      (product) => product.category === "groceries",
+    );
+    console.log(groceries);
   })
   .catch((err) => {
     console.log(err);
