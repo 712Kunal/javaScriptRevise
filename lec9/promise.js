@@ -102,10 +102,16 @@ recipes
     return res.json();
   })
   .then((res) => {
-    console.log(res);
-    console.log(res.limit);
-    console.log(res.skip);
     console.log(res.recipes);
+    res.recipes.forEach((recipe) => {
+      console.log(recipe.name);
+      document.write(`<img src="${recipe.image}" alt="${recipe.title}">`);
+    });
+
+    let caloriesLessThan300 = res.recipes.filter(
+      (recipe) => recipe.caloriesPerServing < 300,
+    );
+    console.log(caloriesLessThan300);
   })
   .catch((err) => {
     console.log(err);
@@ -144,6 +150,10 @@ products
 
     res.products.forEach((product) => {
       console.log(product.category);
+      document.write(`<h1>${product.title}</h1>`);
+      document.write(`<img src="${product.thumbnail}" alt="${product.title}">`);
+      document.write(`<b>${Math.round(product.price * 95)}</b>`);
+      document.write(`<p>${product.description.slice(0, 50)}....</p>`);
     });
 
     let groceries = res.products.filter(
