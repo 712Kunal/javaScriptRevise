@@ -76,6 +76,23 @@ x.then((res) => {
   console.log(res.limit);
   console.log(res.skip);
   console.log(res.users);
+
+  res.users.forEach((user) => {
+    console.log(
+      `${user.firstName} ${user.lastName} is from ${user.address.city} and working in ${user.company.address.city}`,
+    );
+  });
+
+  let females = res.users.filter((user) => user.gender === "female");
+  console.log(females);
+
+  let admins = res.users.filter((user) => user.role === "admin");
+  console.log(admins);
+
+  let adminFemales = res.users.filter(
+    (user) => user.role === "admin" && user.gender === "female",
+  );
+  console.log(adminFemales);
 });
 
 let recipes = fetch("https://dummyjson.com/recipes");
@@ -106,7 +123,7 @@ products
     console.log(res);
     console.log(res.limit);
     console.log(res.skip);
-    console.log(res.products);
+    console.log("products", res.products);
   })
   .catch((err) => {
     console.log(err);
