@@ -9,4 +9,5 @@ let changeText = () => {
   x.style.backgroundColor = "yellow";
   x.style.textAlign = "center";
   x.style.fontSize = "5em";
+  x.innerText = "Hello React js";
 };
