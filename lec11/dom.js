@@ -33,3 +33,8 @@ console.log(d);
 let e = document.querySelectorAll("#react");
 console.log(e);
 
+let f = document.getElementById("box");
+console.log(f);
+
+// f.innerText = "Hello Guys";
+f.innerHTML = "<h1>Hello Guys</h1>";
