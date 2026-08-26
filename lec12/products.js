@@ -31,6 +31,10 @@ let above500 = () => {
   printProducts(filteredProducts);
 };
 
+let lowToHigh = () => {};
+
+let highToLow = () => {};
+
 let fetchingProducts = async () => {
   try {
     let api = await fetch("https://dummyjson.com/products");
