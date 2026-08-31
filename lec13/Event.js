@@ -33,3 +33,10 @@ submitBtn.addEventListener("click", (event) => {
 input.addEventListener("change", (event) => {
   console.log(event.target.value);
 });
+
+let username = document.getElementById("username-form");
+let submitForm = document.getElementById("form-submit");
+submitForm.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log(username.value);
+});
