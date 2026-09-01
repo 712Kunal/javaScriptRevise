@@ -4,11 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #minutes,
+      #seconds,
+      #colon {
+        display: inline;
+        font-size: 50px;
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <h1 id="cntr">0</h1>
     <button onclick="start()">Start</button>
     <button onclick="stop()">Stop</button>
+
+    <br /><br />
+
+    <h1 id="minutes">0</h1>
+    <h1 id="colon">:</h1>
+    <h1 id="seconds">0</h1>
+    <br />
+    <button onclick="startCntr()">Start</button>
+    <button onclick="stopCntr()">Stop</button>
     <script src="./TimerFunc.js"></script>
   </body>
 </html>
