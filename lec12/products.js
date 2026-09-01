@@ -31,9 +31,29 @@ let above500 = () => {
   printProducts(filteredProducts);
 };
 
-let lowToHigh = () => {};
+let lowToHigh = () => {
+  allProducts.sort((a, b) => {
+    return Math.round(a.price * 95) - Math.round(b.price * 95);
+  });
+  printProducts(allProducts);
+};
 
-let highToLow = () => {};
+let highToLow = () => {
+  allProducts.sort((a, b) => {
+    return Math.round(b.price * 95) - Math.round(a.price * 95);
+  });
+  printProducts(allProducts);
+};
+
+let search = document.getElementById("search");
+search.addEventListener("keyup", (event) => {
+  let filteredProducts = allProducts.filter((product) => {
+    return product.title
+      .toLowerCase()
+      .startsWith(event.target.value.toLowerCase());
+  });
+  printProducts(filteredProducts);
+});
 
 let fetchingProducts = async () => {
   try {
